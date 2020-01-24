@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BombRope : MonoBehaviour
+public class TouchInput : MonoBehaviour
 { 
     bool GameOver = false;
 
@@ -26,12 +26,6 @@ public class BombRope : MonoBehaviour
                     hit1.collider.gameObject.transform.position = touch1pos;
                     hit2.collider.gameObject.transform.position = touch2pos;
                 }
-            }
-
-            if (Mathf.Abs(hit1.collider.transform.position.x - hit2.collider.transform.position.x) > 1.5f)
-            {
-                GameOver = true;
-                Debug.Log("Level Completed");
             }
         }
     }
